@@ -1,0 +1,230 @@
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    border-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+  
+:root {
+    --theme-color-black: #333333; /* rgba(51, 51, 51, 1) */
+    --theme-color-brown: #423A3A; 
+    --theme-color-red: #CD3A24;
+    --theme-color-white: #FEFFFF; /* rgba(254, 255, 255, 1) */
+}
+  
+/* ---------- MAIN BODY DECLERATIONS ---------- */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+html, body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #212112;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 7%;
+    overflow-x: hidden;
+    transition: all 200ms linear;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.mobile-container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.hero-image-desktop {
+    display: none;
+}
+
+.hero-banner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-banner .logo-wrapper {
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: auto;
+}
+    
+    .logo-wrapper img {
+        display: block;
+        height: 2.5rem;
+        margin: 0 auto;
+        width: auto;
+    }
+
+.hero-banner .hero-image {
+    background-image: url(https://assets.codepen.io/6060109/athlete-girl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 376px;
+    width: 100%;
+}
+
+/* ---------- TEXT INFO DECLERATIONS ---------- */
+.text-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    
+}
+
+    .text-info > * {
+        padding: 0 2.5rem 1rem;
+    }
+
+    .text-info h2:nth-child(1) {
+        color: var(--theme-color-red);
+        font-weight: normal;
+        padding-top: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .text-info h2 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: var(--theme-color-brown);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .text-info p {
+        color: var(--theme-color-black);
+        line-height: 24px;
+    }
+
+    .text-info .email-signup {
+        margin: 1rem 0 6rem;
+        position: relative;
+        width: 100%;
+    }
+    
+        .email-signup .email-input {
+            border: 1px solid rgba(51, 51, 51, .7);
+            border-radius: 3px;
+            padding: 1rem 1.5rem;
+            opacity: .5;
+            width: 100%;
+        }
+
+        .email-signup .email-input:focus {
+            background-color: var(--theme-color-white);
+            outline: 2px solid var(--theme-color-black);
+            opacity: 1;
+        }
+
+        .email-signup .email-submit {
+            background-color: var(--theme-color-black);
+            border-bottom: 1px solid var(--theme-color-black);
+            border-radius: 2px;
+            color: var(--theme-color-white);
+            cursor: pointer;
+            font-weight: bold;
+            opacity: 1;
+            padding: 1rem 1.5rem;
+            position: absolute;
+            right: 0;
+            margin-right: 2.5rem;
+            z-index: 10;
+        }
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 3.5rem;
+    }
+
+    .mobile-container {
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+
+    .hero-banner .logo-wrapper {
+        margin-left: 3.5rem;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    }
+        .logo-wrapper img {
+            margin: 0 0 0;
+            padding-left: 2.5rem;
+        }
+
+    .hero-image {
+        display: none;
+    }
+
+    .text-info {
+        text-align: left;
+        align-items: start;
+    }
+    
+        .text-info h2 {
+            font-size: 4.5rem;
+        }
+
+        .text-info p {
+            font-size: 16px;
+        }
+
+        .text-info input {
+            font-size: 16px;
+        }
+  
+        .text-info .email-signup {
+            margin: 1rem 0 7rem;
+        }
+
+    .hero-image-desktop {
+        display: block;
+        height: 100%;
+        width: 55vw;
+    }
+
+    .hero-image-desktop img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+  
+    .email-signup .email-submit {
+        border-bottom: 2px solid var(--theme-color-black);
+    }
+}
